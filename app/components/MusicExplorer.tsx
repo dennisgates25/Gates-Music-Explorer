@@ -23,7 +23,7 @@ const modules = [
 ];
 
 function Sidebar({ open, close }: { open: boolean; close: () => void }) {
-  return <AnimatePresence><motion.aside initial={false} animate={{ x: open ? 0 : "-105%" }} className="sidebar">
+  return <AnimatePresence><motion.aside initial={false} className={`sidebar ${open ? "sidebar-open" : ""}`}>
     <button className="mobile-close" onClick={close} aria-label="Close navigation"><X /></button>
     <div className="brand"><span>Gates</span><b>MUSIC</b><strong>Explorer</strong><small>EXPLORE. LEARN. CREATE. PERFORM.</small></div>
     <nav>
